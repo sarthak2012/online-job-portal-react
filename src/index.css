@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  font-family: 'Poppins',sans-serif;
+}
+
+body{
+  background: white;
+  color: #2a2a2a;
+}
+li{
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+}
+
+li:hover::before{
+  position: absolute;
+  content: '';
+  height: 4px;
+  width: 100%;
+  background: #2a68ff;
+  right: 0;
+  bottom: -10px;
+  color: #2a68ff;
+}
+.icon{
+  cursor: pointer;
+}
+
+.card {
+  background-color: #f5f5f5; /* Changed to a lighter color for better contrast */
+  border: 1px solid #e0e0e0; /* Added a border for definition */
+  padding: 1rem; /* Added padding for spacing */
+}
+
+@media (max-width: 768px) {
+  .searchDiv, .firstDiv, .secDiv, .footer, .navBar, .singleGrid, .card {
+    flex-direction: column;
+    align-items: center;
+  }
+}
